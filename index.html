@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manual de HTML</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" type="image/x-icon">
+    <title>Manual de HTML</title>
 </head>
 
 <body>
@@ -14,109 +13,98 @@
         <h1>Manual de HTML</h1>
     </header>
     <div class="container">
-        <div class="sidebar-container">
-        <nav class="sidebar">
+        <div class="sidebar">
             <ul>
-                <li><a href="#introduccion">Introducción</a></li>
-                <li><a href="#etiqueta-html">Etiqueta &lt;html&gt;</a></li>
-                <li><a href="#etiqueta-head">Etiqueta &lt;head&gt;</a></li>
-                <li><a href="#etiqueta-body">Etiqueta &lt;body&gt;</a></li>
-                <li><a href="#etiqueta-div">Etiqueta &lt;div&gt;</a></li>
-                <li><a href="#etiqueta-span">Etiqueta &lt;span&gt;</a></li>
-                <li><a href="#etiqueta-a">Etiqueta &lt;a&gt;</a></li>
-                <li><a href="#etiqueta-p">Etiqueta &lt;p&gt;</a></li>
-                <li><a href="#etiqueta-h">Etiquetas de encabezado</a></li>
+                <li><a href="#html">Etiqueta &lt;html&gt;</a></li>
+                <li><a href="#head">Etiqueta &lt;head&gt;</a></li>
+                <li><a href="#body">Etiqueta &lt;body&gt;</a></li>
+                <li><a href="#div">Etiqueta &lt;div&gt;</a></li>
+                <li><a href="#span">Etiqueta &lt;span&gt;</a></li>
+                <li><a href="#h1-h6">Etiqueta &lt;h1&gt; a &lt;h6&gt;</a></li>
+                <li><a href="#p">Etiqueta &lt;p&gt;</a></li>
+                <li><a href="#a">Etiqueta &lt;a&gt;</a></li>
+                <li><a href="#img">Etiqueta &lt;img&gt;</a></li>
             </ul>
-        </nav></div>
-        
-        <main class="content">
-            <section id="introduccion">
-                <h2>Introducción</h2>
-                <p>Bienvenido al manual de HTML. En este documento, aprenderás sobre las etiquetas más importantes de
-                    HTML y cómo usarlas correctamente.</p>
-            </section>
-            <section id="etiqueta-html">
+        </div>
+        <div class="content">
+            <section id="html">
                 <h2>Etiqueta &lt;html&gt;</h2>
-                <p>La etiqueta <code>&lt;html&gt;</code> es el contenedor principal de un documento HTML. Todo el
-                    contenido de la página debe estar dentro de esta etiqueta.</p>
-                <p><strong>Ejemplo:</strong></p>
+                <p>La etiqueta <code>&lt;html&gt;</code> es el contenedor principal para todo el contenido HTML. Debe
+                    contener las etiquetas <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>.</p>
                 <pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Título del documento&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;p&gt;Contenido de la página&lt;/p&gt;
-  &lt;/body&gt;
+    &lt;head&gt;
+        &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Encabezado&lt;/h1&gt;
+        &lt;p&gt;Parrafo de ejemplo.&lt;/p&gt;
+    &lt;/body&gt;
 &lt;/html&gt;</code></pre>
             </section>
-            <section id="etiqueta-head">
+            <section id="head">
                 <h2>Etiqueta &lt;head&gt;</h2>
-                <p>La etiqueta <code>&lt;head&gt;</code> contiene meta información sobre el documento, como el título,
-                    enlaces a hojas de estilo y scripts.</p>
-                <p><strong>Ejemplo:</strong></p>
+                <p>La etiqueta <code>&lt;head&gt;</code> contiene metadatos y enlaces a recursos externos como hojas de
+                    estilo y scripts.</p>
                 <pre><code>&lt;head&gt;
-  &lt;title&gt;Título del documento&lt;/title&gt;
-  &lt;link rel="stylesheet" href="styles.css"&gt;
-  &lt;script src="script.js"&gt;&lt;/script&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título de la página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
 &lt;/head&gt;</code></pre>
             </section>
-            <section id="etiqueta-body">
+            <section id="body">
                 <h2>Etiqueta &lt;body&gt;</h2>
-                <p>La etiqueta <code>&lt;body&gt;</code> contiene el contenido principal del documento HTML, como texto,
-                    imágenes, enlaces, etc.</p>
-                <p><strong>Ejemplo:</strong></p>
+                <p>La etiqueta <code>&lt;body&gt;</code> contiene el contenido principal de la página web que se muestra
+                    en el navegador.</p>
                 <pre><code>&lt;body&gt;
-  &lt;h1&gt;Título Principal&lt;/h1&gt;
-  &lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
-  &lt;img src="imagen.jpg" alt="Descripción de la imagen"&gt;
+    &lt;h1&gt;Bienvenidos&lt;/h1&gt;
+    &lt;p&gt;Este es el contenido principal de la página.&lt;/p&gt;
 &lt;/body&gt;</code></pre>
             </section>
-            <section id="etiqueta-div">
+            <section id="div">
                 <h2>Etiqueta &lt;div&gt;</h2>
-                <p>La etiqueta <code>&lt;div&gt;</code> se utiliza como contenedor genérico para agrupar contenido. No
-                    tiene un significado específico, pero es útil para aplicar estilos y scripts a bloques de contenido.
-                </p>
-                <p><strong>Ejemplo:</strong></p>
-                <pre><code>&lt;div class="contenedor"&gt;
-  &lt;h2&gt;Subtítulo&lt;/h2&gt;
-  &lt;p&gt;Este es un párrafo dentro de un div.&lt;/p&gt;
+                <p>La etiqueta <code>&lt;div&gt;</code> se utiliza para crear contenedores genéricos en la página, para
+                    agrupar otros elementos y aplicar estilos o scripts.</p>
+                <pre><code>&lt;div&gt;
+    &lt;h2&gt;Sección de ejemplo&lt;/h2&gt;
+    &lt;p&gt;Este es un párrafo dentro de un div.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
             </section>
-            <section id="etiqueta-span">
+            <section id="span">
                 <h2>Etiqueta &lt;span&gt;</h2>
-                <p>La etiqueta <code>&lt;span&gt;</code> se utiliza para aplicar estilos a partes específicas del
-                    contenido sin crear una nueva línea. Es un contenedor en línea.</p>
-                <p><strong>Ejemplo:</strong></p>
-                <pre><code>&lt;p&gt;Este es un &lt;span style="color: red;"&gt;texto en rojo&lt;/span&gt; dentro de un párrafo.&lt;/p&gt;</code></pre>
+                <p>La etiqueta <code>&lt;span&gt;</code> se utiliza para aplicar estilos a partes del texto sin crear un
+                    nuevo bloque. Es un contenedor en línea.</p>
+                <pre><code>&lt;p&gt;Este es un &lt;span style="color: red;"&gt;texto resaltado&lt;/span&gt; en el párrafo.&lt;/p&gt;</code></pre>
             </section>
-            <section id="etiqueta-a">
-                <h2>Etiqueta &lt;a&gt;</h2>
-                <p>La etiqueta <code>&lt;a&gt;</code> define un hipervínculo que enlaza a otra página o sección dentro
-                    del mismo documento.</p>
-                <p><strong>Ejemplo:</strong></p>
-                <pre><code>&lt;a href="https://www.ejemplo.com"&gt;Ir a Ejemplo.com&lt;/a&gt;</code></pre>
+            <section id="h1-h6">
+                <h2>Etiqueta &lt;h1&gt; a &lt;h6&gt;</h2>
+                <p>Las etiquetas <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> se utilizan para definir encabezados,
+                    siendo <code>&lt;h1&gt;</code> el más importante y <code>&lt;h6&gt;</code> el menos importante.</p>
+                <pre><code>&lt;h1&gt;Encabezado 1&lt;/h1&gt;
+&lt;h2&gt;Encabezado 2&lt;/h2&gt;
+&lt;h3&gt;Encabezado 3&lt;/h3&gt;
+&lt;h4&gt;Encabezado 4&lt;/h4&gt;
+&lt;h5&gt;Encabezado 5&lt;/h5&gt;
+&lt;h6&gt;Encabezado 6&lt;/h6&gt;</code></pre>
             </section>
-            <section id="etiqueta-p">
+            <section id="p">
                 <h2>Etiqueta &lt;p&gt;</h2>
-                <p>La etiqueta <code>&lt;p&gt;</code> se utiliza para definir un párrafo de texto. Los navegadores
-                    añaden un margen antes y después de cada párrafo por defecto.</p>
-                <p><strong>Ejemplo:</strong></p>
-                <pre><code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></pre>
+                <p>La etiqueta <code>&lt;p&gt;</code> se utiliza para definir párrafos de texto.</p>
+                <pre><code>&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;</code></pre>
             </section>
-            <section id="etiqueta-h">
-                <h2>Etiquetas de encabezado</h2>
-                <p>Las etiquetas de encabezado <code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> se utilizan para
-                    definir títulos y subtítulos en el contenido. <code>&lt;h1&gt;</code> es el más importante y
-                    <code>&lt;h6&gt;</code> es el menos importante.</p>
-                <p><strong>Ejemplo:</strong></p>
-                <pre><code>&lt;h1&gt;Título principal&lt;/h1&gt;
-&lt;h2&gt;Subtítulo de primer nivel&lt;/h2&gt;
-&lt;h3&gt;Subtítulo de segundo nivel&lt;/h3&gt;
-&lt;h4&gt;Subtítulo de tercer nivel&lt;/h4&gt;
-&lt;h5&gt;Subtítulo de cuarto nivel&lt;/h5&gt;
-&lt;h6&gt;Subtítulo de quinto nivel&lt;/h6&gt;</code></pre>
+            <section id="a">
+                <h2>Etiqueta &lt;a&gt;</h2>
+                <p>La etiqueta <code>&lt;a&gt;</code> define un hipervínculo, que se utiliza para enlazar a otras
+                    páginas web o recursos.</p>
+                <pre><code>&lt;a href="https://www.example.com"&gt;Visitar Ejemplo&lt;/a&gt;</code></pre>
             </section>
-        </main>
+            <section id="img">
+                <h2>Etiqueta &lt;img&gt;</h2>
+                <p>La etiqueta <code>&lt;img&gt;</code> se utiliza para insertar imágenes en la página web. Es una
+                    etiqueta auto-cerrada.</p>
+                <pre><code>&lt;img src="ruta/de/la/imagen.jpg" alt="Descripción de la imagen"&gt;</code></pre>
+            </section>
+        </div>
     </div>
 </body>
 
